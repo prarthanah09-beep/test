@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prarthana Internship Portal</title>
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background-image:url("templates/images/project.jpeg");
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            height:100vh;
+        }
+
+        .overlay{
+            background:rgba(0,0,0,0.5);
+            height:100vh;
+            color:white;
+            text-align:center;
+            padding-top:100px;
+        }
+
+        h1{
+            font-size:60px;
+        }
+
+        h2{
+            font-size:35px;
+        }
+
+        p{
+            font-size:20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <h1>Prarthana Internship Portal</h1>
+
+    <h2>AI Integrated Internship Training</h2>
+
+    <p>Online &  Internship Programs</p>
+
+    <p>Supported By Mevi Technologies</p>
+<p>courses</p>
+<p>Contact:8618770519</p>
+
+<div style="font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; color: #212529; line-height: 1.5;">
+  
+  <!-- Registration Section -->
+  <div style="background: #f8f9fa; padding: 24px; border-radius: 8px; border: 1px solid #dee2e6; margin-bottom: 40px;">
+    <h2 style="font-size: 28px; margin: 0 0 20px 0;">Student Registration</h2>
+    
+    <!-- Success Message -->
+    <div id="successMsg" style="display: none; background: #d1e7dd; color: #0f5132; padding: 16px; border-radius: 6px; border: 1px solid #badbcc; margin-bottom: 20px;">
+      <strong style="font-size: 18px;">✓ Registration Successful!</strong>
+      <p style="margin: 8px 0 0 0;">Thank you for registering. We’ve sent a confirmation email with your details.</p>
+      <button onclick="resetForm()" style="margin-top: 12px; background: #0f5132; color: #fff; padding: 8px 16px; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;">Register Another</button>
+    </div>
+
+    <form id="regForm" onsubmit="return showSuccess(event)">
+      
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; margin-bottom: 6px; font-weight: 600;">Full Name</label>
+        <input type="text" required style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; margin-bottom: 6px; font-weight: 600;">Email</label>
+        <input type="email" required style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
+      </div>
+
+      <!-- Computer Course - Only BCA -->
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; margin-bottom: 6px; font-weight: 600;">Course</label>
+        <select required style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
+          <option value="">Select Course</option>
+          <option>BCA - Bachelor of Computer Applications</option>
+          <optgroup label="BCA Internship Training - First Batch">
+            <option>BCA Internship - Full Stack Development</option>
+            <option>BCA Internship - Python & Data Science</option>
+            <option>BCA Internship - Web Development</option>
+            <option>BCA Internship - Cyber Security</option>
+            <option>BCA Internship - UI/UX Design</option>
+            <option>BCA Internship - Cloud Computing</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; margin-bottom: 6px; font-weight: 600;">State</label>
+        <select required style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
+          <option value="">Select State</option>
+          <option>Andhra Pradesh</option><option>Assam</option><option>Bihar</option>
+          <option>Delhi</option><option>Gujarat</option><option>Karnataka</option>
+          <option>Kerala</option><option>Maharashtra</option><option>Tamil Nadu</option>
+          <option>Uttar Pradesh</option><option>West Bengal</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; margin-bottom: 6px; font-weight: 600;">University in Karnataka</label>
+        <select required style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
+          <option value="">Select University</option>
+          <optgroup label="State Universities">
+            <option>Bangalore University</option><option>University of Mysore</option>
+            <option>Mangalore University</option><option>Karnatak University</option>
+          </optgroup>
+          <optgroup label="Deemed/Private">
+            <option>Christ University</option><option>Jain University</option>
+            <option>REVA University</option><option>Presidency University</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; margin-bottom: 6px; font-weight: 600;">Semester</label>
+        <select required style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
+          <option value="">Select Semester</option>
+          <option>1st Semester</option><option>2nd Semester</option><option>3rd Semester</option>
+          <option>4th Semester</option><option>5th Semester</option><option>6th Semester</option>
+        </select>
+      </div>
+
+      <button type="submit" style="background: #0d6efd; color: #fff; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">Submit Registration</button>
+    </form>
+  </div>
+
+  <!-- About Us Section - First Batch BCA Only -->
+  <div style="background: #fff; padding: 24px; border-radius: 8px; border: 1px solid #dee2e6;">
+    <h2 style="font-size: 28px; margin: 0 0 12px 0; text-align: center;">About Us</h2>
+    <p style="font-size: 16px; color: #0d6efd; text-align: center; margin: 0 0 24px 0; font-weight: 600;">Launching Our First Internship Batch for BCA Students</p>
+    
+    <div style="margin-bottom: 24px;">
+      <h3 style="font-size: 20px; margin: 0 0 12px 0;">Exclusively for BCA Students</h3>
+      <p style="margin: 0 0 12px 0; font-size: 16px;">
+        We’re launching our first internship training program designed specifically for BCA students. 
+        This is your chance to get hands-on industry experience and build real projects before graduation.
+      </p>
+      <p style="margin: 0; font-size: 16px;">
+        Choose from Full Stack Development, Python & Data Science, Web Development, Cyber Security, UI/UX Design, 
+        and Cloud Computing. 100% practical training with dedicated mentor support.
+      </p>
+    </div>
+
+    <div style="margin-bottom: 24px;">
+      <h3 style="font-size: 20px; margin: 0 0 16px 0; text-align: center;">What You'll Get</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+        
+        <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 16px; border-radius: 6px; border: 1px solid #dee2e6;">
+          <h4 style="font-size: 16px; margin: 0 0 8px 0; color: #0d6efd;">Live Projects</h4>
+          <p style="margin: 0; font-size: 14px; color: #6c757d;">Build real applications for your portfolio.</p>
+        </div>
+
+        <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 16px; border-radius: 6px; border: 1px solid #dee2e6;">
+          <h4 style="font-size: 16px; margin: 0 0 8px 0; color: #0d6efd;">1:1 Mentorship</h4>
+          <p style="margin: 0; font-size: 14px; color: #6c757d;">Direct guidance from industry professionals.</p>
+        </div>
+
+        <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 16px; border-radius: 6px; border: 1px solid #dee2e6;">
+          <h4 style="font-size: 16px; margin: 0 0 8px 0; color: #0d6efd;">Certification</h4>
+          <p style="margin: 0; font-size: 14px; color: #6c757d;">Internship certificate + letter of recommendation.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="background: #e7f1ff; color: #084298; padding: 20px; border-radius: 6px; text-align: center; border: 1px solid #b6d4fe;">
+      <h4 style="font-size: 18px; margin: 0 0 8px 0;">First Batch Starting Soon</h4>
+      <p style="margin: 0; font-size: 14px;">Limited seats for BCA students only. Register now to secure your spot.</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function showSuccess(e) {
+  e.preventDefault();
+  document.getElementById('successMsg').style.display = 'block';
+  document.getElementById('regForm').style.display = 'none';
+  window.scrollTo(0, 0);
+  return false;
+}
+function resetForm() {
+  document.getElementById('regForm').reset();
+  document.getElementById('successMsg').style.display = 'none';
+  document.getElementById('regForm').style.display = 'block';
+}
+<body style="margin: 0; background-image: url('images/project.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+  
+  <div style="max-width: 900px; margin: 0 auto; padding: 20px;">
+    <!-- Your content here -->
+  </div>
+
+</body>
+
+</script>
+</body>
+</html>
+{% load static %}
+
+<style>
+body{
+
+    background-image:url("{% static 'images/project.jpeg' %}");
+    background-size:cover;
+    background-position:center;
+}
+</style>
